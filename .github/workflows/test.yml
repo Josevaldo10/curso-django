@@ -1,0 +1,43 @@
+name: Test
+
+on: [ push ]
+
+
+jobs:
+  build:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PIPENV_NO_INHERIT: 1
+      PIPENV_IGNORE_VIRTUALENVS: 1
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+        architecture: x64
+    - name: Copying configurations
+      run: |
+          cp contrib/env-sample .env
+    - name: Install Dependencies
+      run: |
+        pip install pipenv
+        pipenv sync --dev
+    - name: Run Tests
+      run: |
+        python manage.py test
+    - name: Rodar flake8
+      uses: py-actions/flake8@v1
+      with:
+        checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
+    - name: Rodar Testes Automáticos
+      run: |
+        pytest --cov=pypro
+    - name: Relatório Coverage
+      env:
+       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      run: |
+       codecov

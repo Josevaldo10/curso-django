@@ -23,9 +23,6 @@ jobs:
       run: |
         pip install pipenv
         pipenv sync --dev
-    - name: Run Tests
-      run: |
-        python manage.py test
     - name: Rodar flake8
       uses: py-actions/flake8@v1
       with:

@@ -129,7 +129,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 # STORAGE AWS CONFIGS
-#----------------------------------------------------------------------------------------
 
 if AWS_ACCESS_KEY_ID:
     AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
@@ -141,8 +140,8 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_CUSTOM_DOMAIN = None
     AWS_DEFAULT_ACL = 'private'
 
- # static assets
- #--------------------------------------------------------------------------------------
+# Static assets
+
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
@@ -150,7 +149,7 @@ if AWS_ACCESS_KEY_ID:
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 # Upload Media Folder
-#-----------------------------------------------------------------------------------------
+
     DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'
     DEFAULT_S3_PATH = 'media'
     MEDIA_ROOT = f'/{DEFAULT_S3_PATH}/'

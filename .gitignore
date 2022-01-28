@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#dynaconf settings
+/settings.yml
+/frontend/css/
+/frontend/node_modules/
+
+# no including dumps
+*.dump
+
+pythonpro-website/.pytest_cache/
+mediafiles/
+
+# local posgres files
+.pgdata

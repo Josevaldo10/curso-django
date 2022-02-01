@@ -23,7 +23,6 @@ from decouple import config, Csv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -97,7 +96,6 @@ DATABASES = {
     'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -116,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -127,7 +124,6 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -160,7 +156,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_CUSTOM_DOMAIN = None
     AWS_DEFAULT_ACL = 'private'
 
-# Static assets
+    # Static assets
 
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
     STATIC_S3_PATH = 'static'
@@ -168,7 +164,7 @@ if AWS_ACCESS_KEY_ID:
     STATIC_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}/'
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
-# Upload Media Folder
+    # Upload Media Folder
 
     DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'
     DEFAULT_S3_PATH = 'media'
@@ -178,7 +174,7 @@ if AWS_ACCESS_KEY_ID:
     INSTALLED_APPS.append('s3_folder_storage')
     INSTALLED_APPS.append('storages')
 
-SENTRY_DSN=config('SENTRY_DSN', default=None)
+SENTRY_DSN = config('SENTRY_DSN', default=None)
 
 if SENTRY_DSN:
     sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])

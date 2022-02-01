@@ -2,7 +2,7 @@
 
 Código desenvolvido no módulo de Django do www.python.pro.br
 
-Aplicação disponivel em https://pythonprodangojp.herokuapp.com
+Aplicação disponivel em https://pythonprodangojp.herokuapp.com/
 
 [![Updates](https://pyup.io/repos/github/JPS-TechEad/curso-django/shield.svg)](https://pyup.io/repos/github/JPS-TechEad/curso-django/)
 [![Python 3](https://pyup.io/repos/github/JPS-TechEad/curso-django/python-3-shield.svg)](https://pyup.io/repos/github/JPS-TechEad/curso-django/)

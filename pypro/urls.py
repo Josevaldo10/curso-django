@@ -19,7 +19,7 @@ from django.urls import path, include
 from pypro import settings
 from pypro.base.views import home
 
-app_name = 'base'
+app_name = 'pypro.base'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),

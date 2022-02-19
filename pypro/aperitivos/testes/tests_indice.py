@@ -22,4 +22,3 @@ def test_status_code(resp):
 )
 def test_titulo_video(resp, titulo):
     assert_contains(resp, titulo)
-

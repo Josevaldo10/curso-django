@@ -3,9 +3,9 @@ from django.shortcuts import render
 
 class Video:
      def __init__(self, slug, titulo, vimeo_id):
-        self.slug = slug
-        self.titulo = titulo
-        self.vimeo_id = vimeo_id
+         self.slug = slug
+         self.titulo = titulo
+         self.vimeo_id = vimeo_id
 
 
 videos = [
@@ -21,5 +21,5 @@ def indice(request):
 
 
 def video(request, slug):
-   video = videos_dct[slug]
-   return render(request, 'aperitivos/video.html', context={'video': video})
+    video = videos_dct[slug]
+    return render(request, 'aperitivos/video.html', context={'video': video})

@@ -2,10 +2,10 @@ from django.shortcuts import render
 
 
 class Video:
-     def __init__(self, slug, titulo, vimeo_id):
-         self.slug = slug
-         self.titulo = titulo
-         self.vimeo_id = vimeo_id
+    def __init__(self, slug, titulo, vimeo_id):
+        self.slug = slug
+        self.titulo = titulo
+        self.vimeo_id = vimeo_id
 
 
 videos = [

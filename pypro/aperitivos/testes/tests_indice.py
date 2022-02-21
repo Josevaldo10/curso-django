@@ -24,7 +24,6 @@ def test_titulo_video(resp, titulo):
     assert_contains(resp, titulo)
 
 
-
 @pytest.mark.parametrize(
     'slug',
     [

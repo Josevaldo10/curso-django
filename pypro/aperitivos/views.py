@@ -24,7 +24,6 @@ def indice(request):
     return render(request, 'aperitivos/indice.html', context={'videos': videos})
 
 
-
 def video(request, slug):
     video = videos_dct[slug]
     return render(request, 'aperitivos/video.html', context={'video': video})

@@ -7,4 +7,5 @@ from pypro.aperitivos.models import Video
 class VideoAdmin(ModelAdmin):
     list_display = ('titulo', 'slug', 'creation', 'vimeo_id')
     ordering = ('creation',)
+<<<<<<< HEAD
     prepopulated_fields = {'slug': ('titulo',)}

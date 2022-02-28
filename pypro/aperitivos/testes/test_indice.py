@@ -8,7 +8,7 @@ from pypro.django_assertions import assert_contains
 
 @pytest.fixture
 def videos(db):
-    return mommy.make(Video,3)
+    return mommy.make(Video, 3)
 
 
 @pytest.fixture
@@ -23,7 +23,6 @@ def test_status_code(resp):
 def test_titulo_video(resp, videos):
     for video in videos:
         assert_contains(resp, video.titulo)
-
 
 
 def test_link_video(resp, videos):

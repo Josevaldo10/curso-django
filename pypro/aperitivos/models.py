@@ -12,5 +12,5 @@ class Video(models.Model):
         return reverse('aperitivos:video', args=(self.slug,))
 
     def __str__(self):
-<<<<<<< HEAD
         return f'Video: {self.titulo}'
+

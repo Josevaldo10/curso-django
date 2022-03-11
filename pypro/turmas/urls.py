@@ -6,3 +6,4 @@ app_name = 'turmas'
 urlpatterns = [
     path('', views.indice, name='indice'),
 ]
+

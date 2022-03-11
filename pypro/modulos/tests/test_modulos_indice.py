@@ -5,7 +5,8 @@ from django.urls.base import reverse
 from model_bakery import baker
 
 from pypro.django_assertions import assert_contains
-from pypro.modulos.models import Aula, Modulo
+from pypro.modulos.models import Modulo, Aula
+
 
 
 @pytest.fixture

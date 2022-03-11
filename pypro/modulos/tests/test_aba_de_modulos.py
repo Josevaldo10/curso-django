@@ -1,6 +1,6 @@
-from django.urls.base import reverse
 import pytest
-from model_mommy import mommy
+from django.urls.base import reverse
+from model_bakery import baker
 
 from pypro.django_assertions import assert_contains
 from pypro.modulos.models import Modulo
@@ -8,7 +8,7 @@ from pypro.modulos.models import Modulo
 
 @pytest.fixture
 def modulos(db):
-    return mommy.make(Modulo, 2)
+    return baker.make(Modulo, 2)
 
 
 @pytest.fixture

@@ -1,3 +1,3 @@
 [flake8]
-max-line-length = 120
-exclude=.venv, pypro/base
+max-line-length = 300
+exclude=.venv

@@ -2,7 +2,9 @@
 {% load static %}
 {% block title %}{{modulo.titulo}}{% endblock title %}
 {% block description %} Página com detalhe do módulo {{modulo.titulo}}{% endblock description %}
+
 {% block body %}
+
 <div class="container">
     {% for modulo in modulos %}
     <div class="row">

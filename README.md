@@ -53,13 +53,9 @@ Aplicação disponivel em https://pythonprodangojp.herokuapp.com/
     </tr>
     <tr>
       <td>Servidor de arquivos estáticos</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <td>Fernando</td>
       <td>AWS S3</td>
     </tr>
-    <tr>
+     <tr>
       <td>WSGI</td>
       <td>Gunicorn</td>
     </tr>
